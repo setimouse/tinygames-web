@@ -1,18 +1,7 @@
 import type { Metadata } from 'next';
-import { Inter, Orbitron } from 'next/font/google';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import './globals.css';
-
-const inter = Inter({
-  variable: '--font-inter',
-  subsets: ['latin'],
-});
-
-const orbitron = Orbitron({
-  variable: '--font-orbitron',
-  subsets: ['latin'],
-});
 
 export const metadata: Metadata = {
   title: 'TinyGames - 经典游戏合集 | 数独·扫雷·2048·棋类AI对战',
@@ -41,10 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="zh-CN"
-      className={`${inter.variable} ${orbitron.variable}`}
-    >
+    <html lang="zh-CN">
       <body className="min-h-screen flex flex-col bg-[#0a0a1a] antialiased">
         {/* Grain overlay */}
         <div className="grain-overlay" />
